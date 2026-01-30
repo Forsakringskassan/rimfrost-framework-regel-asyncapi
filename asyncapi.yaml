@@ -1,0 +1,115 @@
+asyncapi: 3.0.0
+info:
+  title: Regel - Framework Async API
+  version: 1.0.0
+  description: Generiskt Async API för initiering av regler
+
+channels:
+  regel.requests:
+    address: regel.requests
+    messages:
+      RegelRequestMessage:
+        $ref: "#/components/messages/RegelRequestMessage"
+
+  regel.responses:
+    address: regel.responses
+    messages:
+      RegelResponseMessage:
+        $ref: "#/components/messages/RegelResponseMessage"
+
+operations:
+  RegelRequest:
+    action: receive
+    summary: Initierar evaluering av regeln
+    channel:
+      $ref: "#/channels/regel.requests"
+    reply:
+      address:
+        description: Resultatet skickas tillbaka till källan.
+        location: "$message.header#/replyTo"
+      channel:
+        $ref: "#/channels/regel.responses"
+
+components:
+  schemas:
+    RegelRequestMessageHeaders:
+      type: object
+      properties:
+        replyTo:
+          type: string
+          description: Topic där response ska skickas
+        correlationId:
+          type: string
+          format: uuid
+          description: Unikt ID som kopplar ihop request & response
+
+    RegelRequestMessagePayloadData:
+      type: object
+      title: RegelRequestMessagePayloadData
+      required:
+        - kundbehovsflodeId
+      properties:
+        kundbehovsflodeId:
+          type: string
+          format: uuid
+          description: Kundbehovsflöde id
+
+    RegelResponseMessageHeaders:
+      type: object
+      properties:
+        correlationId:
+          type: string
+          format: uuid
+          description: Unikt ID som kopplar ihop request & response
+
+    RegelResponseMessagePayloadData:
+      type: object
+      title: RegelResponseMessagePayloadData
+      required:
+        - kundbehovsflodeId
+        - utfall
+      properties:
+        kundbehovsflodeId:
+          type: string
+          format: uuid
+          description: Kundbehovsflöde id
+        utfall:
+          title: utfall
+          type: string
+          description: Utfall av regel, t.ex. om personen har rätt till försäkring
+          enum:
+            - Ja
+            - Nej
+            - Utredning
+
+  messages:
+    RegelRequestMessage:
+      headers:
+        $ref: "#/components/schemas/RegelRequestMessageHeaders"
+      payload:
+        title: RegelRequestMessagePayload
+        allOf:
+          - $ref: "kogito-cloudevent.yaml#/components/schemas/KogitoCloudEvent"
+          - type: object
+            title: RegelRequestMessagePayloadData
+            required:
+              - data
+            properties:
+              data:
+                $ref: "#/components/schemas/RegelRequestMessagePayloadData"
+
+    RegelResponseMessage:
+      headers:
+        $ref: "#/components/schemas/RegelResponseMessageHeaders"
+      payload:
+        title: RegelResponseMessagePayload
+        allOf:
+          - $ref: "kogito-cloudevent.yaml#/components/schemas/KogitoCloudEvent"
+          - type: object
+            title: RegelResponseMessagePayloadData
+            required:
+              - data
+            properties:
+              data:
+                $ref: "#/components/schemas/RegelResponseMessagePayloadData"
+
