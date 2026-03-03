@@ -47,12 +47,12 @@ components:
       type: object
       title: RegelRequestMessagePayloadData
       required:
-        - kundbehovsflodeId
+        - handlaggningId
       properties:
-        kundbehovsflodeId:
+        handlaggningId:
           type: string
           format: uuid
-          description: Kundbehovsflöde id
+          description: Unikt ID som identifierar handläggningsärendet
 
     RegelResponseMessageHeaders:
       type: object
@@ -66,13 +66,13 @@ components:
       type: object
       title: RegelResponseMessagePayloadData
       required:
-        - kundbehovsflodeId
+        - handlaggningId
         - utfall
       properties:
-        kundbehovsflodeId:
+        handlaggningId:
           type: string
           format: uuid
-          description: Kundbehovsflöde id
+          description: Unikt ID som identifierar handläggningsärendet
         utfall:
           title: utfall
           type: string
