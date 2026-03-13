@@ -48,11 +48,16 @@ components:
       title: RegelRequestMessagePayloadData
       required:
         - handlaggningId
+        - aktivitetId
       properties:
         handlaggningId:
           type: string
           format: uuid
           description: Unikt ID som identifierar handläggningsärendet
+        aktivitetId:
+            type: string
+            format: uuid
+            description: Unikt ID som identifierar aktivitet
 
     RegelResponseMessageHeaders:
       type: object
