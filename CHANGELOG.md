@@ -1,3 +1,9 @@
+## 0.0.5 (2026-03-17)
+
+### Bug Fixes
+
+-  Revert "fix: Add yrkandeId to RegelRequestMessagePayloadData" ([f1841](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/f18410636f54dd0) Lars Persson)  
+
 ## 0.0.4 (2026-03-17)
 
 ### Bug Fixes
