@@ -47,14 +47,9 @@ components:
       type: object
       title: RegelRequestMessagePayloadData
       required:
-        - yrkandeId
         - handlaggningId
         - aktivitetId
       properties:
-        yrkandeId:
-          type: string
-          format: uuid
-          description: Unikt ID som indentifierar yrkandet
         handlaggningId:
           type: string
           format: uuid
@@ -76,14 +71,9 @@ components:
       type: object
       title: RegelResponseMessagePayloadData
       required:
-        - yrkandeId
         - handlaggningId
         - utfall
       properties:
-        yrkandeId:
-          type: string
-          format: uuid
-          description: Unikt ID som identifierar yrkandet
         handlaggningId:
           type: string
           format: uuid
