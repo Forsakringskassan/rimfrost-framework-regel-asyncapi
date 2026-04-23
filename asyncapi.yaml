@@ -3,20 +3,19 @@ info:
   title: Regel - Framework Async API
   version: 1.0.0
   description: Generiskt Async API för initiering av regler
-
 channels:
   regel.requests:
     address: regel.requests
     messages:
       RegelRequestMessage:
         $ref: "#/components/messages/RegelRequestMessage"
-
   regel.responses:
     address: regel.responses
     messages:
       RegelResponseMessage:
         $ref: "#/components/messages/RegelResponseMessage"
-
+      RegelErrorMessage:
+        $ref: "#/components/messages/RegelErrorMessage"
 operations:
   RegelRequest:
     action: receive
@@ -29,7 +28,6 @@ operations:
         location: "$message.header#/replyTo"
       channel:
         $ref: "#/channels/regel.responses"
-
 components:
   schemas:
     RegelRequestMessageHeaders:
@@ -42,7 +40,6 @@ components:
           type: string
           format: uuid
           description: Unikt ID som kopplar ihop request & response
-
     RegelRequestMessagePayloadData:
       type: object
       title: RegelRequestMessagePayloadData
@@ -58,7 +55,6 @@ components:
             type: string
             format: uuid
             description: Unikt ID som identifierar aktivitet
-
     RegelResponseMessageHeaders:
       type: object
       properties:
@@ -66,7 +62,6 @@ components:
           type: string
           format: uuid
           description: Unikt ID som kopplar ihop request & response
-
     RegelResponseMessagePayloadData:
       type: object
       title: RegelResponseMessagePayloadData
@@ -86,7 +81,24 @@ components:
             - Ja
             - Nej
             - Utredning
-
+    RegelErrorMessagePayloadData:
+      type: object
+      title: RegelErrorMessagePayloadData
+      required:
+        - handlaggningId
+        - felkod
+        - felmeddelande
+      properties:
+        handlaggningId:
+          type: string
+          format: uuid
+          description: Unikt ID som identifierar handläggningsärendet
+        felkod:
+          type: string
+          description: Maskinsläsbar felkod, t.ex. INTERN_FEL eller OGILTIG_INDATA
+        felmeddelande:
+          type: string
+          description: Beskrivning av vad som gick fel
   messages:
     RegelRequestMessage:
       headers:
@@ -102,7 +114,6 @@ components:
             properties:
               data:
                 $ref: "#/components/schemas/RegelRequestMessagePayloadData"
-
     RegelResponseMessage:
       headers:
         $ref: "#/components/schemas/RegelResponseMessageHeaders"
@@ -117,4 +128,17 @@ components:
             properties:
               data:
                 $ref: "#/components/schemas/RegelResponseMessagePayloadData"
-
+    RegelErrorMessage:
+      headers:
+        $ref: "#/components/schemas/RegelResponseMessageHeaders"
+      payload:
+        title: RegelErrorMessagePayload
+        allOf:
+          - $ref: "kogito-cloudevent.yaml#/components/schemas/KogitoCloudEvent"
+          - type: object
+            title: RegelErrorMessagePayloadData
+            required:
+              - data
+            properties:
+              data:
+                $ref: "#/components/schemas/RegelErrorMessagePayloadData"
