@@ -17,8 +17,6 @@ channels:
     messages:
       RegelResponseMessage:
         $ref: "#/components/messages/RegelResponseMessage"
-      RegelErrorMessage:
-        $ref: "#/components/messages/RegelErrorMessage"
 
 operations:
   RegelRequest:
@@ -70,6 +68,20 @@ components:
           format: uuid
           description: Unikt ID som kopplar ihop request & response
 
+    RegelErrorInformation:
+      type: object
+      title: RegelErrorInformation
+      required:
+        - felkod
+        - felmeddelande
+      properties:
+        felkod:
+          type: string
+          description: Maskinsläsbar felkod, t.ex. INTERN_FEL eller OGILTIG_INDATA
+        felmeddelande:
+          type: string
+          description: Beskrivning av vad som gick fel
+
     RegelResponseMessagePayloadData:
       type: object
       title: RegelResponseMessagePayloadData
@@ -89,25 +101,11 @@ components:
             - Ja
             - Nej
             - Utredning
-
-    RegelErrorMessagePayloadData:
-      type: object
-      title: RegelErrorMessagePayloadData
-      required:
-        - handlaggningId
-        - felkod
-        - felmeddelande
-      properties:
-        handlaggningId:
-          type: string
-          format: uuid
-          description: Unikt ID som identifierar handläggningsärendet
-        felkod:
-          type: string
-          description: Maskinsläsbar felkod, t.ex. INTERN_FEL eller OGILTIG_INDATA
-        felmeddelande:
-          type: string
-          description: Beskrivning av vad som gick fel
+            - Error
+        error:
+          $ref: "#/components/schemas/RegelErrorInformation"
+          description: Finns endast när utfall är Error, annars null
+          nullable: true
 
   messages:
     RegelRequestMessage:
@@ -139,18 +137,3 @@ components:
             properties:
               data:
                 $ref: "#/components/schemas/RegelResponseMessagePayloadData"
-
-    RegelErrorMessage:
-      headers:
-        $ref: "#/components/schemas/RegelResponseMessageHeaders"
-      payload:
-        title: RegelErrorMessagePayload
-        allOf:
-          - $ref: "kogito-cloudevent.yaml#/components/schemas/KogitoCloudEvent"
-          - type: object
-            title: RegelErrorMessagePayloadData
-            required:
-              - data
-            properties:
-              data:
-                $ref: "#/components/schemas/RegelErrorMessagePayloadData"
