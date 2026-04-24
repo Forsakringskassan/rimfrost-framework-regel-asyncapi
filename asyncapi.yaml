@@ -1,4 +1,5 @@
 asyncapi: 3.0.0
+
 info:
   title: Regel - Framework Async API
   version: 1.0.0
@@ -67,6 +68,20 @@ components:
           format: uuid
           description: Unikt ID som kopplar ihop request & response
 
+    RegelErrorInformation:
+      type: object
+      title: RegelErrorInformation
+      required:
+        - felkod
+        - felmeddelande
+      properties:
+        felkod:
+          type: string
+          description: Maskinsläsbar felkod, t.ex. INTERN_FEL eller OGILTIG_INDATA
+        felmeddelande:
+          type: string
+          description: Beskrivning av vad som gick fel
+
     RegelResponseMessagePayloadData:
       type: object
       title: RegelResponseMessagePayloadData
@@ -86,6 +101,11 @@ components:
             - Ja
             - Nej
             - Utredning
+            - Error
+        error:
+          $ref: "#/components/schemas/RegelErrorInformation"
+          description: Finns endast när utfall är Error, annars null
+          nullable: true
 
   messages:
     RegelRequestMessage:
@@ -117,4 +137,3 @@ components:
             properties:
               data:
                 $ref: "#/components/schemas/RegelResponseMessagePayloadData"
-
