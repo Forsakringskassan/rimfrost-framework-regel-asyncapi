@@ -1,3 +1,14 @@
+## 0.1.0 (2026-04-27)
+
+### Features
+
+-  **FKPOC-632**  add error to utfall enum and nullable error object ([21e91](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/21e91b0b45fc281) Jorgen Lindstrom)  
+-  **FKPOC-632**  add blank lines between blocks ([aa696](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/aa696cca15246e9) Jorgen Lindstrom)  
+-  **FKPOC-632**  uppdatera asyncAPI med RegelErrorMessage ([78945](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/789453eab8316b1) Jorgen Lindstrom)  
+
+### Dependency updates
+
+- update gradle to v9.4.1 ([6824c](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/6824c531a7b05c8) renovate[bot])  
 ## 0.0.5 (2026-03-17)
 
 ### Bug Fixes
