@@ -1,3 +1,9 @@
+## 0.1.1 (2026-04-27)
+
+### Bug Fixes
+
+-  Add RegelFelkod enum ([efaea](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/efaeae75f29d460) Lars Persson)  
+
 ## 0.1.0 (2026-04-27)
 
 ### Features
