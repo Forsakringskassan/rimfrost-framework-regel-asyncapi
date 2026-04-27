@@ -68,6 +68,13 @@ components:
           format: uuid
           description: Unikt ID som kopplar ihop request & response
 
+    RegelFelkod:
+      type: string
+      enum:
+        - HANDLAGGNING_READ_FAILURE
+        - HANDLAGGNING_WRITE_FAILURE
+        - OTHER
+
     RegelErrorInformation:
       type: object
       title: RegelErrorInformation
@@ -76,7 +83,7 @@ components:
         - felmeddelande
       properties:
         felkod:
-          type: string
+          $ref: '#/components/schemas/RegelFelkod'
           description: Maskinsläsbar felkod, t.ex. INTERN_FEL eller OGILTIG_INDATA
         felmeddelande:
           type: string
