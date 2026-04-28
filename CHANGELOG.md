@@ -1,3 +1,13 @@
+## 1.0.0 (2026-04-28)
+
+### Breaking changes
+
+-  release 1.0 ([248a0](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/248a08038bd32e6) Ulf Slunga)  
+
+### Features
+
+-  release 1.0 ([248a0](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/248a08038bd32e6) Ulf Slunga)  
+
 ## 0.1.1 (2026-04-27)
 
 ### Bug Fixes
