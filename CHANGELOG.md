@@ -1,3 +1,12 @@
+## 1.0.1 (2026-05-11)
+
+### Bug Fixes
+
+-  Change RegelFelkod type from enum to string ([5273e](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/5273e2b6c914eeb) Lars Persson)  
+
+### Dependency updates
+
+- update gradle to v9.5.0 ([e2b88](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/e2b888f08404954) renovate[bot])  
 ## 1.0.0 (2026-04-28)
 
 ### Breaking changes
