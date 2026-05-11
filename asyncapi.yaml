@@ -70,10 +70,15 @@ components:
 
     RegelFelkod:
       type: string
-      enum:
-        - HANDLAGGNING_READ_FAILURE
-        - HANDLAGGNING_WRITE_FAILURE
-        - OTHER
+      pattern: ^[A-Z0-9]([_A-Z0-9]*[A-Z0-9]){0,1}$
+      description: |-
+        Maskinläsbar felkod som indikerar vilket fel som har inträffat. Felkoder kan fritt definieras av implementerande kod med undantag för koder som börjar med prefixet "RIMFROST_" som är reserverat för felkoder definierade av rimfrost ramverket. Om en felkod inte känns igen så ska den behandlas som om "RIMFROST_OTHER" hade angivits, d.v.s, som om det är ett generiskt fel utan specifik innebörd.
+
+        Följande är de felkoder som för närvarande är definierade av ramverket:
+
+            - RIMFROST_HANDLAGGNING_READ_FAILURE
+            - RIMFROST_HANDLAGGNING_WRITE_FAILURE
+            - RIMFROST_OTHER
 
     RegelErrorInformation:
       type: object
