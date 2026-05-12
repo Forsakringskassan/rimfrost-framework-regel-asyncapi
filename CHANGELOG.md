@@ -1,3 +1,9 @@
+## 1.0.2 (2026-05-12)
+
+### Bug Fixes
+
+-  Add storage read and write error codes ([20e57](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/20e579e37b3f162) Lars Persson)  
+
 ## 1.0.1 (2026-05-11)
 
 ### Bug Fixes
