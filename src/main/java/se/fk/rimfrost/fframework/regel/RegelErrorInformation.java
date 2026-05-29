@@ -87,8 +87,7 @@ public class RegelErrorInformation implements Serializable
 
    public String toString()
    {
-      String var10000 = this.toIndentedString(this.felkod);
-      return "class RegelErrorInformation {\n    felkod: " + var10000 + "\n    felmeddelande: "
+      return "class RegelErrorInformation {\n    felkod: " + this.toIndentedString(this.felkod) + "\n    felmeddelande: "
             + this.toIndentedString(this.felmeddelande) + "\n    additionalProperties: "
             + this.toIndentedString(this.additionalProperties) + "\n}";
    }
