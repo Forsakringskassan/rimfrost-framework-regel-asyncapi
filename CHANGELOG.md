@@ -1,3 +1,20 @@
+# rimfrost-framework-regel-asyncapi changelog
+
+Changelog of rimfrost-framework-regel-asyncapi.
+
+## 1.0.3 (2026-06-01)
+
+### Bug Fixes
+
+-  removed build.gradle ([d693d](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/d693dc481ccc6b2) Nils Elveros)  
+-  Fix mvnw permissions ([37564](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/37564a2156054b4) Lars Persson)  
+-  removed var10000 ([6e403](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/6e40304c1170141) Nils Elveros)  
+-  switch to maven and add POJOs ([1df11](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/1df11d8a5604afb) Nils Elveros)  
+-  **deps**  update dependency se.fk.gradle:gradle-conventions to v1.18.2 ([17b6c](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/17b6ceae33f3969) renovate[bot])  
+
+### Dependency updates
+
+- update gradle to v9.5.1 ([08a63](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/08a639e41d7e0dc) renovate[bot])  
 ## 1.0.2 (2026-05-12)
 
 ### Bug Fixes
@@ -69,13 +86,13 @@
 - update gradle to v9.3.1 ([a925d](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/a925d03ee0d6b36) renovate[bot])  
 ## 0.0.0 (2026-01-30)
 
+## 0.0.1 (2026-01-30)
+
 ### Other changes
 
 **Initial import from rimfrost-regel-common-asyncapi**
 
 
 [9637e](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/9637e308a587378) Lars Persson *2026-01-30 13:57:55*
-
-
 
 
