@@ -2,6 +2,14 @@
 
 Changelog of rimfrost-framework-regel-asyncapi.
 
+## 1.0.4 (2026-06-01)
+
+### Bug Fixes
+
+-  missing imports ([84f8a](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/84f8a15f7258522) Nils Elveros)  
+-  added string value to kogitoproctype ([ccac6](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/ccac6822529bbcb) Nils Elveros)  
+-  add kogitoproctype ([b6c5a](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/b6c5a026dae90bf) Nils Elveros)  
+
 ## 1.0.3 (2026-06-01)
 
 ### Bug Fixes
