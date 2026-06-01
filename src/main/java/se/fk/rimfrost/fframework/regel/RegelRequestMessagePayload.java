@@ -41,7 +41,7 @@ public class RegelRequestMessagePayload implements Serializable
    private String kogitorootprocid;
    @JsonProperty("kogitoproctype")
    @JsonInclude(Include.NON_NULL)
-   private String kogitoproctype;
+   private Kogitoproctype kogitoproctype;
    @JsonProperty("kogitoprocinstanceid")
    @JsonInclude(Include.NON_NULL)
    private String kogitoprocinstanceid;
@@ -140,12 +140,12 @@ public class RegelRequestMessagePayload implements Serializable
       this.kogitorootprocid = kogitorootprocid;
    }
 
-   public String getKogitoproctype()
+   public Kogitoproctype getKogitoproctype()
    {
       return this.kogitoproctype;
    }
 
-   public void setKogitoproctype(String kogitoproctype)
+   public void setKogitoproctype(Kogitoproctype kogitoproctype)
    {
       this.kogitoproctype = kogitoproctype;
    }
