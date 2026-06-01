@@ -1,5 +1,8 @@
 package se.fk.rimfrost.framework.regel;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+
 public enum Kogitoproctype
 {
    BPMN("BPMN");
