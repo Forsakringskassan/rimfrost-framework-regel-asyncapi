@@ -2,6 +2,12 @@
 
 Changelog of rimfrost-framework-regel-asyncapi.
 
+## 1.0.5 (2026-06-02)
+
+### Bug Fixes
+
+-  specversion ([3b2c9](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/3b2c92cda229c7c) Nils Elveros)  
+
 ## 1.0.4 (2026-06-01)
 
 ### Bug Fixes
