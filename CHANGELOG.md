@@ -2,6 +2,15 @@
 
 Changelog of rimfrost-framework-regel-asyncapi.
 
+## 1.1.1 (2026-06-10)
+
+### Bug Fixes
+
+-  add replyTo in payload data ([f34b6](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/f34b61223892b62) Nils Elveros)  
+-  **deps**  update jackson monorepo to v2.22 ([76226](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/76226280f3f4f13) renovate[bot])  
+
+## rimfrost-1.1 (2026-06-02)
+
 ## 1.0.5 (2026-06-02)
 
 ### Bug Fixes
