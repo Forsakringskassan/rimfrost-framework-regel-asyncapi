@@ -2,6 +2,12 @@
 
 Changelog of rimfrost-framework-regel-asyncapi.
 
+## 1.1.2 (2026-06-10)
+
+### Bug Fixes
+
+-  fframework to framework ([f215d](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/f215de66daf9b9c) Nils Elveros)  
+
 ## 1.1.1 (2026-06-10)
 
 ### Bug Fixes
