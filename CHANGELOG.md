@@ -2,6 +2,11 @@
 
 Changelog of rimfrost-framework-regel-asyncapi.
 
+## 1.1.3 (2026-08-29)
+
+### Dependency updates
+
+- pin forsakringskassan/.github action to d1349e6 ([ac652](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/ac65267970551f8) renovate[bot])  
 ## 1.1.2 (2026-06-10)
 
 ### Bug Fixes
