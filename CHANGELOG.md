@@ -2,6 +2,12 @@
 
 Changelog of rimfrost-framework-regel-asyncapi.
 
+## 1.1.4 (2026-09-22)
+
+### Bug Fixes
+
+-  unpin reusable workflows to restore release pipeline ([ac73e](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/ac73ead47ff1d1e) Ulf Slunga)  
+
 ## 1.1.3 (2026-08-29)
 
 ### Dependency updates
