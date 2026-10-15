@@ -58,7 +58,7 @@ components:
           description: Topic där svar ska skickas
         processvyUrl:
           type: string
-          description: Länk till den mikrofrontend där processen visar sin processvy (stegindikatorn). Samma format som uppgiftens url.
+          description: Relativ sökväg till den mikrofrontend där processen visar sin processvy (stegindikatorn), t.ex. /process/vah. Samma format som uppgiftens url.
           example: /process/vah
 
     RegelResponseMessageHeaders:
