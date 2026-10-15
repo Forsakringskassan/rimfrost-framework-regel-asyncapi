@@ -23,6 +23,8 @@ public class RegelRequestMessagePayloadData implements Serializable
    private String aktivitetId;
    @JsonProperty(required = true)
    private String replyTo;
+   @JsonProperty(required = true)
+   private String processvyUrl;
    @JsonAnySetter
    @JsonInclude(Include.NON_NULL)
    private HashMap<String, Object> additionalProperties;
@@ -61,6 +63,16 @@ public class RegelRequestMessagePayloadData implements Serializable
       this.replyTo = replyTo;
    }
 
+   public String getProcessvyUrl()
+   {
+      return this.processvyUrl;
+   }
+
+   public void setProcessvyUrl(String processvyUrl)
+   {
+      this.processvyUrl = processvyUrl;
+   }
+
    @JsonAnyGetter
    public HashMap<String, Object> getAdditionalProperties()
    {
@@ -82,6 +94,7 @@ public class RegelRequestMessagePayloadData implements Serializable
       {
          RegelRequestMessagePayloadData self = (RegelRequestMessagePayloadData) o;
          return Objects.equals(this.handlaggningId, self.handlaggningId) && Objects.equals(this.aktivitetId, self.aktivitetId)
+               && Objects.equals(this.processvyUrl, self.processvyUrl)
                && Objects.equals(this.additionalProperties, self.additionalProperties);
       }
       else
@@ -94,14 +107,15 @@ public class RegelRequestMessagePayloadData implements Serializable
    {
       return Objects.hash(new Object[]
       {
-            this.handlaggningId, this.aktivitetId, this.additionalProperties
+            this.handlaggningId, this.aktivitetId, this.processvyUrl, this.additionalProperties
       });
    }
 
    public String toString()
    {
       return "class RegelRequestMessagePayloadData {\n    handlaggningId: " + this.toIndentedString(this.handlaggningId)
-            + "\n    aktivitetId: " + this.toIndentedString(this.aktivitetId) + "\n    additionalProperties: "
+            + "\n    aktivitetId: " + this.toIndentedString(this.aktivitetId) + "\n    processvyUrl: "
+            + this.toIndentedString(this.processvyUrl) + "\n    additionalProperties: "
             + this.toIndentedString(this.additionalProperties) + "\n}";
    }
 
