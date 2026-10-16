@@ -23,7 +23,7 @@ public class RegelRequestMessagePayloadData implements Serializable
    private String aktivitetId;
    @JsonProperty(required = true)
    private String replyTo;
-   @JsonProperty(required = true)
+   @JsonProperty
    private String processvyUrl;
    @JsonAnySetter
    @JsonInclude(Include.NON_NULL)
