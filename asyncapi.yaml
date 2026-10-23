@@ -51,10 +51,7 @@ components:
         aktivitetId:
             type: string
             format: uuid
-            description: Unikt ID som identifierar aktivitet
-        replyTo:
-          type: string
-          description: Topic där svar ska skickas
+            description: Unikt ID som identifierar aktivitetx
         processvyUrl:
           type: string
           description: Valfri. Relativ sökväg till den mikrofrontend där processen visar sin processvy (stegindikatorn), t.ex. /process/vah. Samma format som uppgiftens url. Saknas när processen inte har någon processvy.
