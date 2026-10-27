@@ -2,6 +2,25 @@
 
 Changelog of rimfrost-framework-regel-asyncapi.
 
+## 1.2.0 (2026-10-27)
+
+### Features
+
+-  add required processvyUrl to regel request payload data (FKPOC-1150) ([6ae38](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/6ae38e52f4eb1cc) LisaWedin_Ductus)  
+
+### Bug Fixes
+
+-  consolidate CI and release workflows into single delegating jobs ([38f5f](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/38f5f0b2854fc53) Ulf Slunga)  
+-  remove reply to from RegelRequestMessagePayload ([e25a7](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/e25a7b4f09b0d30) Nils Elveros)  
+-  make processvyUrl optional in regel request (FKPOC-1150) ([b2265](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/b22650e7b118f22) LisaWedin_Ductus)  
+-  clarify processvyUrl format in description (FKPOC-1150) ([346d4](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/346d4dbb190c85f) LisaWedin_Ductus)  
+
+### Dependency updates
+
+- update forsakringskassan/.github digest to cbd74f1 ([1f6cc](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/1f6cc1bbc24d9cb) renovate[bot])  
+- pin forsakringskassan/.github action to bfb01f7 ([14921](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/149215929921c9a) renovate[bot])  
+## rimfrost-1_2 (2026-09-22)
+
 ## 1.1.4 (2026-09-22)
 
 ### Bug Fixes
