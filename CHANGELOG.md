@@ -2,6 +2,12 @@
 
 Changelog of rimfrost-framework-regel-asyncapi.
 
+## 1.2.1 (2026-11-02)
+
+### Bug Fixes
+
+-  Remove replyTo from RegelRequestMessagePayloadData.java ([6090a](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/6090a48c7615b5d) Lars Persson)  
+
 ## 1.2.0 (2026-10-27)
 
 ### Features
