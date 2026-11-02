@@ -21,8 +21,6 @@ public class RegelRequestMessagePayloadData implements Serializable
    private String handlaggningId;
    @JsonProperty(required = true)
    private String aktivitetId;
-   @JsonProperty(required = true)
-   private String replyTo;
    @JsonProperty
    private String processvyUrl;
    @JsonAnySetter
@@ -51,16 +49,6 @@ public class RegelRequestMessagePayloadData implements Serializable
    public void setAktivitetId(String aktivitetId)
    {
       this.aktivitetId = aktivitetId;
-   }
-
-   public String getReplyTo()
-   {
-      return this.replyTo;
-   }
-
-   public void setReplyTo(String replyTo)
-   {
-      this.replyTo = replyTo;
    }
 
    public String getProcessvyUrl()
