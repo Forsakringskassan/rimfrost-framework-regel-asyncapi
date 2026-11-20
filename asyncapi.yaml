@@ -47,7 +47,7 @@ components:
         handlaggningId:
           type: string
           format: uuid
-          description: Unikt ID som identifierar handläggningsärendet
+          description: Unikt ID som identifierar handläggningsärendet. Får inte vara null.
         aktivitetId:
             type: string
             format: uuid
@@ -105,7 +105,7 @@ components:
         handlaggningId:
           type: string
           format: uuid
-          description: Unikt ID som identifierar handläggningsärendet
+          description: Unikt ID som identifierar handläggningsärendet. Får inte vara null.
         utfall:
           title: utfall
           type: string

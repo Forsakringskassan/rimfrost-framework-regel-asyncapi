@@ -6,8 +6,11 @@ import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import java.util.Map;
 import java.util.Objects;
@@ -18,6 +21,7 @@ public class RegelRequestMessagePayloadData implements Serializable
    private static final long serialVersionUID = 1L;
 
    @JsonProperty(required = true)
+   @JsonSetter(nulls = Nulls.FAIL)
    private String handlaggningId;
    @JsonProperty(required = true)
    private String aktivitetId;
@@ -29,6 +33,12 @@ public class RegelRequestMessagePayloadData implements Serializable
 
    public RegelRequestMessagePayloadData()
    {
+   }
+
+   @JsonCreator
+   public RegelRequestMessagePayloadData(@JsonProperty(value = "handlaggningId", required = true) String handlaggningId)
+   {
+      this.handlaggningId = Objects.requireNonNull(handlaggningId, "handlaggningId must not be null");
    }
 
    public String getHandlaggningId()

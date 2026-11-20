@@ -3,8 +3,11 @@ package se.fk.rimfrost.framework.regel;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import java.util.Map;
 import java.util.Objects;
@@ -18,6 +21,7 @@ public class RegelResponseMessagePayloadData implements Serializable
 {
    private static final long serialVersionUID = 1L;
    @JsonProperty(required = true)
+   @JsonSetter(nulls = Nulls.FAIL)
    private String handlaggningId;
    @JsonProperty(required = true)
    private Utfall utfall;
@@ -30,6 +34,12 @@ public class RegelResponseMessagePayloadData implements Serializable
 
    public RegelResponseMessagePayloadData()
    {
+   }
+
+   @JsonCreator
+   public RegelResponseMessagePayloadData(@JsonProperty(value = "handlaggningId", required = true) String handlaggningId)
+   {
+      this.handlaggningId = Objects.requireNonNull(handlaggningId, "handlaggningId must not be null");
    }
 
    public String getHandlaggningId()
