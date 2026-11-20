@@ -38,7 +38,7 @@ public class RegelRequestMessagePayloadData implements Serializable
    @JsonCreator
    public RegelRequestMessagePayloadData(@JsonProperty(value = "handlaggningId", required = true) String handlaggningId)
    {
-      this.handlaggningId = handlaggningId;
+      this.handlaggningId = Objects.requireNonNull(handlaggningId, "handlaggningId must not be null");
    }
 
    public String getHandlaggningId()
