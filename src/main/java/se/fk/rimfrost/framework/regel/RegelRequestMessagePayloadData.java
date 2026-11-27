@@ -21,6 +21,8 @@ public class RegelRequestMessagePayloadData implements Serializable
    private String handlaggningId;
    @JsonProperty(required = true)
    private String aktivitetId;
+   @JsonProperty(required = true)
+   private String handlaggningInstanceBaseUrl;
    @JsonProperty
    private String processvyUrl;
    @JsonAnySetter
@@ -49,6 +51,16 @@ public class RegelRequestMessagePayloadData implements Serializable
    public void setAktivitetId(String aktivitetId)
    {
       this.aktivitetId = aktivitetId;
+   }
+
+   public String getHandlaggningInstanceBaseUrl()
+   {
+      return this.handlaggningInstanceBaseUrl;
+   }
+
+   public void setHandlaggningInstanceBaseUrl(String handlaggningInstanceBaseUrl)
+   {
+      this.handlaggningInstanceBaseUrl = handlaggningInstanceBaseUrl;
    }
 
    public String getProcessvyUrl()
@@ -82,6 +94,7 @@ public class RegelRequestMessagePayloadData implements Serializable
       {
          RegelRequestMessagePayloadData self = (RegelRequestMessagePayloadData) o;
          return Objects.equals(this.handlaggningId, self.handlaggningId) && Objects.equals(this.aktivitetId, self.aktivitetId)
+               && Objects.equals(this.handlaggningInstanceBaseUrl, self.handlaggningInstanceBaseUrl)
                && Objects.equals(this.processvyUrl, self.processvyUrl)
                && Objects.equals(this.additionalProperties, self.additionalProperties);
       }
@@ -95,14 +108,15 @@ public class RegelRequestMessagePayloadData implements Serializable
    {
       return Objects.hash(new Object[]
       {
-            this.handlaggningId, this.aktivitetId, this.processvyUrl, this.additionalProperties
+            this.handlaggningId, this.aktivitetId, this.handlaggningInstanceBaseUrl, this.processvyUrl, this.additionalProperties
       });
    }
 
    public String toString()
    {
       return "class RegelRequestMessagePayloadData {\n    handlaggningId: " + this.toIndentedString(this.handlaggningId)
-            + "\n    aktivitetId: " + this.toIndentedString(this.aktivitetId) + "\n    processvyUrl: "
+            + "\n    aktivitetId: " + this.toIndentedString(this.aktivitetId) + "\n    handlaggningInstanceBaseUrl: "
+            + this.toIndentedString(this.handlaggningInstanceBaseUrl) + "\n    processvyUrl: "
             + this.toIndentedString(this.processvyUrl) + "\n    additionalProperties: "
             + this.toIndentedString(this.additionalProperties) + "\n}";
    }
