@@ -2,6 +2,12 @@
 
 Changelog of rimfrost-framework-regel-asyncapi.
 
+## 1.3.1 (2026-11-27)
+
+### Bug Fixes
+
+-  add handlaggningInstanceBaseUrl to RegelRequestMessagePayloadData ([9c386](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/9c38620f57f38a6) Ulf Slunga)  
+
 ## 1.3.0 (2026-11-27)
 
 ### Features
