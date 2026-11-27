@@ -43,6 +43,7 @@ components:
       required:
         - handlaggningId
         - aktivitetId
+        - handlaggningInstanceBaseUrl
       properties:
         handlaggningId:
           type: string
@@ -52,6 +53,11 @@ components:
             type: string
             format: uuid
             description: Unikt ID som identifierar aktivitetx
+        handlaggningInstanceBaseUrl:
+          type: string
+          format: uri
+          description: Bas-URL till handläggningsinstansen. Används för att styra URL:er mot handläggnings-API:et.
+          example: https://handlaggning.example.com
         processvyUrl:
           type: string
           description: Valfri. Relativ sökväg till den mikrofrontend där processen visar sin processvy (stegindikatorn), t.ex. /process/vah. Samma format som uppgiftens url. Saknas när processen inte har någon processvy.
