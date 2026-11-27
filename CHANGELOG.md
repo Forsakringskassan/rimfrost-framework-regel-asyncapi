@@ -2,6 +2,21 @@
 
 Changelog of rimfrost-framework-regel-asyncapi.
 
+## 1.3.0 (2026-11-27)
+
+### Features
+
+-  add required handlaggningInstanceBaseUrl to RegelRequestMessagePayloadData ([25663](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/25663f8bbd89017) Ulf Slunga)  
+
+### Bug Fixes
+
+-  **deps**  update dependency com.fasterxml.jackson.core:jackson-annotations to v2.23 ([a8516](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/a85161eb2867658) renovate[bot])  
+
+## rimfrost-1_3 (2026-11-07)
+
+### Dependency updates
+
+- update forsakringskassan/.github digest to cbc0db8 ([b865e](https://github.com/Forsakringskassan/rimfrost-framework-regel-asyncapi/commit/b865e194ee03b07) renovate[bot])  
 ## 1.2.3 (2026-11-03)
 
 ### Bug Fixes
